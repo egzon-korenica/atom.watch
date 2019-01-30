@@ -15,7 +15,7 @@ export const router = new VueRouter({
         component: App
     },
     {
-        name: 'clock',
+        name: 'egzon',
         path: '/clock/:fmt/:tz',
         component: App
     },
