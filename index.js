@@ -25,7 +25,7 @@ export const router = new VueRouter({
         component: App
     },
     {
-        name: 'timer',
+        name: 'egzon',
         path: '/timer',
         component: App
     },
