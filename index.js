@@ -35,7 +35,7 @@ export const router = new VueRouter({
         component: App
     },
     {
-        name: 'countdown',
+        name: 'finalcountdown',
         path: '/countdown/:time',
         component: App
     },
