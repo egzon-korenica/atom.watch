@@ -81,7 +81,22 @@ Vue.directive('tween-chars', (el, binding, vnode) => {
         return;
     }
 
-
+Vue.directive('tween-chars', (el, binding, vnode) => {
+    if (el.children.length < binding.value.value.length) {
+        el.tweenHolders = [];
+        el.innerHTML = "";
+        for (let i = 0; i < binding.value.value.length; i++) {
+            let holder = document.createElement('span');
+            el.tweenHolders[i] = Raphael(holder, 66, 100).path(chars[binding.value.value[i]]).attr({
+                "stroke": binding.value.color,
+                "stroke-width": "4",
+                "stroke-linecap": "round",
+                "stroke-linejoin": "round",
+            });
+            el.appendChild(holder);
+        }
+        return;
+}
     
 
 Vue.directive('copy-on-click', {
