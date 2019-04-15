@@ -82,24 +82,7 @@ Vue.directive('tween-chars', (el, binding, vnode) => {
     }
 
 
-    for (let i = 0; i < el.children.length; i++) {
-        let char;
-        if (i < binding.value.value.length) {
-            char = chars[binding.value.value[i]];
-            el.children[i].style.display = "";
-        }
-        else {
-            char = ' ';
-            el.children[i].style.display = "none";
-        }
-        el.tweenHolders[i] = el.tweenHolders[i].animate({path: char}, 250).attr({
-            "stroke": binding.value.color,
-            "stroke-width": "4",
-            "stroke-linecap": "round",
-            "stroke-linejoin": "round",
-        });
-    }
-});
+    
 
 Vue.directive('copy-on-click', {
     bind: (el) => {
