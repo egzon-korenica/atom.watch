@@ -124,6 +124,7 @@ Vue.directive('copy-on-click', {
 
                     if (success !== undefined) {
                         success();
+                        console.log("success");
                     }
                 }
                 else {
